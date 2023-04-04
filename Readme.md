@@ -1,3 +1,5 @@
+**PART OF HACKATHON**
+
 We learnt datascience and AzureML from scratch and built solution for banking dataset within short time.
 
 **Problem definition**
