@@ -19,7 +19,7 @@ Approach in short:
 
 5.Scaling with ACI And AKS
 
-6.Flask web UI for new customers to check their loan status.
+6.Flask web UI for new customers to check their loan status hosted using heroku
 
 
 Edit : 21st Sep 2020 ->
