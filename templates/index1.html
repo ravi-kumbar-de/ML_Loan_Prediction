@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Loan Status</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
+
+  
+</head>
+<body>
+
+<div class="form-style-10">
+<h1>Welcome to RDA Bank<span>Apply and Check your Loan approval status </span></h1>
+<form action="{{ url_for('predict')}}"method="post">
+
+    <div class="section"><span>1</span></div>
+    <div class="inner-wrap">
+        <label>Your Full Name <input type="text" name="full name" required/></label>
+        <label>Annual income <input type="number" name="annual income" min="0" required/></label>
+        <label>Expected Loan amount <input type="number" name="expected loan amount" min="0" required/></label>
+    
+	<label>Select Term
+		<select required name="term">
+    			<option value="short term">Short Term</option>
+			<option value="long term">Long Term</option>
+		</select>
+	</label>
+
+	<label> Home Ownership 
+		<select required name="home ownership">
+			<option value="own home">Own Home</option>
+    			<option value="home mortgage">Home Mortgage</option>
+			<option value="rent">Rent</option>
+		</select>
+	</label>
+
+	<label>Years in current job
+	<select required name="years in current in job">
+		<option value="< 1 year"> < 1 year </option>
+    		<option value="1 year">1 year</option>
+		<option value="2 years">2 years</option>
+		<option value="3 years">3 years</option>
+		<option value="4 years">4 years</option>
+		<option value="5 years">5 years</option>
+		<option value="6 years">6 years</option>
+		<option value="7 years">7 years</option>
+		<option value="8 years">8 years</option>
+		<option value="9 years">9 years</option>
+		<option value="10+ years">10+ year</option>
+
+
+	</select>
+	</label>
+
+	<label>Purpose of Loan
+	<select required name="purpose of loan">
+		<option value="home improvements"> Home Improvements </option>
+    		<option value="debt consolidation">Debt Consolidation</option>
+		<option value="buy house">Buy House</option>
+		<option value="business loan">Business Loan</option>
+		<option value="buy a car">Buy a Car</option>
+		<option value="major purchase">major_purchase</option>
+		<option value="take a trip">small_business</option>
+		<option value="medical bills">Medical Bills</option>
+		<option value="wedding">wedding</option>
+		<option value="vacation">vacation</option>
+		<option value="educational expenses">Educational Expenses</option>
+		<option value="moving">moving</option>
+		<option value="renewable energy">renewable_energy</option>
+		<option value="other">Other</option>
+	</select>
+	</label>
+
+
+    <div class="section"><span>2</span>Credit account information</div>
+        <div class="inner-wrap">
+
+	<label>Credit score [Range 350 to 850]<input type="number" name="credit score" required="required" min="350" max="850" /></label>	
+    	<label>Years of Credit History<input type="number" name="years of credit history" required="required" min="0" /></label>
+	<label>Monthly Debt<input type="number" name="monthly debt" required="required" min="0" /></label>
+    	<label>Number of credit problems<input type="number" name="number of credit problems"  required="required" min="0" /></label>
+    	<label>Number of open accounts<input type="number" name="number of open accounts" required="required" min="0" /></label>
+	<label>Current Credit balance<input type="number" name="current credit balance"  required="required" min="0"/></label>
+	<label>Maximum open credit<input type="number" name="maximum open credit" required="required" min="0" /></label>
+	<label>Brankruptcies<input type="number" name="bankruptcies" required="required" min="0"/></label>
+	<label>Tax liens<input type="number" name="tax liens" required="required" min="0" /></label>
+	
+    </div>
+    <div class="button-section">
+     <input value="Check My Application", type="submit",name="Check My Application"/>
+     <span class="privacy-policy">
+ 	ML Loan predictor by Ravi,David,Arun
+     </span>
+
+
+    </div>
+</form>
+</div>
+
+</body>
+</html>
